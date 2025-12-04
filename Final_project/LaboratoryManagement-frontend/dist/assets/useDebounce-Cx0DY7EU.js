@@ -1,0 +1,1 @@
+import{S as e,Y as t,tt as n}from"./index-BK-GGJM4.js";var r=e(`info`,[[`circle`,{cx:`12`,cy:`12`,r:`10`,key:`1mglay`}],[`path`,{d:`M12 16v-4`,key:`1dtifu`}],[`path`,{d:`M12 8h.01`,key:`e9boi3`}]]),i=n(t(),1);function a(e,t=500){let[n,r]=(0,i.useState)(e);return(0,i.useEffect)(()=>{let n=setTimeout(()=>r(e),t);return()=>clearTimeout(n)},[e,t]),n}export{r as n,a as t};

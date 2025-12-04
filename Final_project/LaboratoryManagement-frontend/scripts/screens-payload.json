@@ -1,0 +1,142 @@
+[
+  {
+    "screen_code": "SCR_LANDING",
+    "path": "/",
+    "base_path": "/",
+    "component_name": "LandingPage",
+    "title": "Landing",
+    "is_menu": false,
+    "is_public": true,
+    "ordering": 0
+  },
+  {
+    "screen_code": "SCR_LOGIN",
+    "path": "/login",
+    "base_path": "/login",
+    "component_name": "Login",
+    "title": "Login",
+    "is_menu": false,
+    "is_public": true,
+    "ordering": 1
+  },
+  {
+    "screen_code": "SCR_FORGOT_SEND",
+    "path": "/forgot/send",
+    "base_path": "/forgot/send",
+    "component_name": "ForgotSend",
+    "title": "Forgot Password - Send",
+    "is_menu": false,
+    "is_public": true,
+    "ordering": 2
+  },
+  {
+    "screen_code": "SCR_FORGOT_VERIFY",
+    "path": "/forgot/verify",
+    "base_path": "/forgot/verify",
+    "component_name": "ForgotVerify",
+    "title": "Forgot Password - Verify",
+    "is_menu": false,
+    "is_public": true,
+    "ordering": 3
+  },
+  {
+    "screen_code": "SCR_FORGOT_RESET",
+    "path": "/forgot/reset",
+    "base_path": "/forgot/reset",
+    "component_name": "ForgotReset",
+    "title": "Forgot Password - Reset",
+    "is_menu": false,
+    "is_public": true,
+    "ordering": 4
+  },
+  {
+    "screen_code": "SCR_USER_HOME",
+    "path": "/home",
+    "base_path": "/home",
+    "component_name": "UserHome",
+    "title": "User Home",
+    "is_menu": true,
+    "is_public": false,
+    "ordering": 10
+  },
+  {
+    "screen_code": "SCR_ADMIN_USERS",
+    "path": "/admin/users",
+    "base_path": "/admin/users",
+    "component_name": "UsersList",
+    "title": "User Management",
+    "is_menu": true,
+    "is_public": false,
+    "ordering": 20
+  },
+  {
+    "screen_code": "SCR_ADMIN_ROLES",
+    "path": "/admin/roles",
+    "base_path": "/admin/roles",
+    "component_name": "RolesList",
+    "title": "Role Management",
+    "is_menu": true,
+    "is_public": false,
+    "ordering": 21
+  },
+  {
+    "screen_code": "SCR_ADMIN_PRIVS",
+    "path": "/admin/privileges",
+    "base_path": "/admin/privileges",
+    "component_name": "PrivilegesList",
+    "title": "Privilege Management",
+    "is_menu": true,
+    "is_public": false,
+    "ordering": 22
+  },
+  {
+    "screen_code": "SCR_LAB_MANAGER",
+    "path": "/lab-manager",
+    "base_path": "/lab-manager",
+    "component_name": "LabManagerHome",
+    "title": "Lab Manager",
+    "is_menu": true,
+    "is_public": false,
+    "ordering": 30
+  },
+  {
+    "screen_code": "SCR_LAB_TECH",
+    "path": "/lab-tech",
+    "base_path": "/lab-tech",
+    "component_name": "LabTechHome",
+    "title": "Lab Tech",
+    "is_menu": true,
+    "is_public": false,
+    "ordering": 31
+  },
+  {
+    "screen_code": "SCR_LAB_USER",
+    "path": "/lab-user",
+    "base_path": "/lab-user",
+    "component_name": "LabUserHome",
+    "title": "Lab User",
+    "is_menu": true,
+    "is_public": false,
+    "ordering": 32
+  },
+  {
+    "screen_code": "SCR_SERVICE",
+    "path": "/service",
+    "base_path": "/service",
+    "component_name": "ServiceHome",
+    "title": "Service",
+    "is_menu": true,
+    "is_public": false,
+    "ordering": 40
+  },
+  {
+    "screen_code": "SCR_NOTFOUND",
+    "path": "/404",
+    "base_path": "/404",
+    "component_name": "NotFound",
+    "title": "Not Found",
+    "is_menu": false,
+    "is_public": true,
+    "ordering": 9999
+  }
+]

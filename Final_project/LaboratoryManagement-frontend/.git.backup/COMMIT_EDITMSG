@@ -1,0 +1,70 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	new file:   README.md
+#	new file:   eslint.config.js
+#	new file:   index.html
+#	new file:   package-lock.json
+#	new file:   package.json
+#	new file:   public/fboratory.svg
+#	new file:   public/vite.svg
+#	new file:   scripts/generate-component-map.mjs
+#	new file:   scripts/screens-payload.json
+#	new file:   src/App.jsx
+#	new file:   src/DynamicRouter.jsx
+#	new file:   src/assets/react.svg
+#	new file:   src/componentMap.js
+#	new file:   src/components/Loading.jsx
+#	new file:   src/components/PrefetchLink.jsx
+#	new file:   src/components/layout/Sidebar.jsx
+#	new file:   src/components/layout/Topbar.jsx
+#	new file:   src/config/menus/adminMenu.js
+#	new file:   src/config/menus/labTechMenu.js
+#	new file:   src/hooks/useDebounce.js
+#	new file:   src/i18n/index.js
+#	new file:   src/i18n/locales/en.json
+#	new file:   src/index.css
+#	new file:   src/layouts/AdminLayout.jsx
+#	new file:   src/layouts/ProfileLayout.jsx
+#	new file:   src/layouts/RoleAwareLayout.jsx
+#	new file:   src/lib/ProtectedRoute.js
+#	new file:   src/lib/ProtectedRoute.jsx
+#	new file:   src/lib/api.js
+#	new file:   src/lib/auth.js
+#	new file:   src/lib/auth.jsx
+#	new file:   src/lib/index.js
+#	new file:   src/lib/index.jsx
+#	new file:   src/lib/notify.js
+#	new file:   src/main.jsx
+#	new file:   src/pages/ADMIN/CreateUser.jsx
+#	new file:   src/pages/ADMIN/EditUser.jsx
+#	new file:   src/pages/ADMIN/PrivilegesList.jsx
+#	new file:   src/pages/ADMIN/RolesList.jsx
+#	new file:   src/pages/ADMIN/UsersList.jsx
+#	new file:   src/pages/CommonPage/ChangePassword.jsx
+#	new file:   src/pages/CommonPage/Profile.jsx
+#	new file:   src/pages/CommonPage/UpdateProfile.jsx
+#	new file:   src/pages/ForgotReset.jsx
+#	new file:   src/pages/ForgotSend.jsx
+#	new file:   src/pages/ForgotVerify.jsx
+#	new file:   src/pages/LAB_MANAGER/LabManagerHome.jsx
+#	new file:   src/pages/LAB_TECH/LabTechHome.jsx
+#	new file:   src/pages/LAB_USER/LabUserHome.jsx
+#	new file:   src/pages/LandingPage.jsx
+#	new file:   src/pages/Login.jsx
+#	new file:   src/pages/NotFound.jsx
+#	new file:   src/pages/Placeholder.jsx
+#	new file:   src/pages/SERVICE/ServiceHome.jsx
+#	new file:   src/pages/USER/UserHome.jsx
+#	new file:   src/router.jsx
+#	new file:   src/services/adminApi.js
+#	new file:   src/utils/routeUtil.js
+#	new file:   vite.config.js
+#

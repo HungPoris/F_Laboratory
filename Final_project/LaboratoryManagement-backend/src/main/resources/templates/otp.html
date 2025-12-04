@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:inline="text">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Password Reset Request</title>
+    <style>
+        .preheader{display:none!important;visibility:hidden;opacity:0;height:0;width:0;overflow:hidden}
+        body{margin:0;padding:0;background:#f1f5f9;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+        .container{max-width:600px;margin:0 auto;background:#ffffff}
+        .header{background:linear-gradient(135deg,#0b66ff 0%,#0ea5e9 100%);padding:32px 24px;text-align:center}
+        .logo{font-size:28px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;margin:0}
+        .logo-sub{color:#e0f2fe;font-size:14px;margin-top:4px}
+        .content{padding:40px 32px}
+        .greeting{font-size:20px;color:#0f172a;margin:0 0 24px;font-weight:600}
+        .text{font-size:16px;line-height:1.6;color:#334155;margin:16px 0}
+        .otp-card{background:linear-gradient(135deg,#fef2f2 0%,#fee2e2 100%);border:2px dashed #dc2626;border-radius:12px;
+            padding:24px;margin:28px 0;text-align:center}
+        .otp-label{font-size:14px;color:#991b1b;font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+        .otp{font-weight:800;font-size:42px;letter-spacing:8px;color:#dc2626;margin:8px 0;font-family:Consolas,Monaco,monospace}
+        .otp-note{font-size:13px;color:#991b1b;margin-top:12px}
+        .btn-container{text-align:center;margin:32px 0}
+        .btn{display:inline-block;background:#0b66ff;color:#ffffff;text-decoration:none;padding:14px 32px;border-radius:8px;
+            font-weight:600;font-size:16px;transition:background .3s}
+        .btn:hover{background:#0956d6}
+        .info-box{background:#f8fafc;border-left:4px solid #0b66ff;padding:16px;border-radius:6px;margin:24px 0}
+        .info-box p{margin:4px 0;font-size:14px;color:#475569}
+        .info-box strong{color:#0f172a}
+        .warning{background:#fef3c7;border-left:4px solid #f59e0b;padding:16px;border-radius:6px;margin:24px 0}
+        .warning p{margin:0;font-size:14px;color:#92400e;line-height:1.5}
+        .footer{background:#f8fafc;padding:32px 24px;text-align:center;border-top:1px solid #e2e8f0}
+        .footer-text{font-size:13px;color:#64748b;margin:8px 0}
+        .footer-links{margin:16px 0}
+        .footer-links a{color:#0b66ff;text-decoration:none;margin:0 12px;font-size:13px}
+        .footer-company{font-size:12px;color:#94a3b8;margin-top:16px}
+        @media (max-width:480px){
+            .content{padding:24px 20px}
+            .otp{font-size:36px;letter-spacing:6px}
+            .btn{padding:12px 24px;font-size:15px}
+            .header{padding:24px 20px}
+        }
+    </style>
+</head>
+<body>
+<!-- Preheader for inbox preview -->
+<div class="preheader">OTP code: [[${otp}]] – valid until [[${expiresAt}]].</div>
+
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">🔬 <span th:text="${appName}">Laboratory Management</span></div>
+        <div class="logo-sub">Laboratory Management System</div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <p class="greeting">
+            Hello <span th:text="${fullName} ?: 'there'">there</span>! 👋
+        </p>
+
+        <p class="text">
+            We received a request to reset your account password. Use the OTP code below to verify your identity:
+        </p>
+
+        <!-- OTP Card -->
+        <div class="otp-card">
+            <div class="otp-label">🔐 OTP Verification Code</div>
+            <div class="otp" th:text="${otp}">000000</div>
+            <div class="otp-note">⏱ This code is valid for <b th:text="${ttlMinutes}">10</b> minutes</div>
+        </div>
+
+        <!-- Optional button: only visible if resetUrl exists -->
+        <p class="text" th:if="${resetUrl != null}">Or click the button below to reset your password directly:</p>
+        <div class="btn-container" th:if="${resetUrl != null}">
+            <a th:href="${resetUrl}" class="btn">🔑 Reset Password Now</a>
+        </div>
+
+        <!-- Info Box -->
+        <div class="info-box">
+            <p><strong>📋 Request Information:</strong></p>
+            <p>🧾 Request ID: <strong th:text="${requestId}">REQUEST-ID</strong></p>
+            <p>🕐 Expiration: <strong th:text="${expiresAt}">--:-- dd/MM/yyyy</strong></p>
+            <p th:if="${clientIp != null}">🌐 IP Address: <strong th:text="${clientIp}">unknown</strong></p>
+        </div>
+
+        <!-- Warning -->
+        <div class="warning">
+            <p><strong>⚠️ Security Notice:</strong> If you did not request a password reset, please ignore this email
+                and contact our support team immediately. Do not share your OTP code with anyone!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="footer-text"><strong th:text="${appName}">Laboratory Management</strong></p>
+        <p class="footer-text">Automated email from <span th:text="${appName}">Laboratory Management</span> system</p>
+
+        <div class="footer-links">
+            <a href="#">Help</a> •
+            <a href="#">Contact</a> •
+            <a href="#">Policy</a>
+        </div>
+
+        <p class="footer-company">
+            © 2025 <span th:text="${appName}">Laboratory Management</span>. All rights reserved.<br>
+            📧 support@labmanagement.vn | 📞 033-xxxx
+        </p>
+    </div>
+</div>
+</body>
+</html>
